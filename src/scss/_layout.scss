@@ -268,7 +268,11 @@ main {
           font-size: 3rem;
           padding-bottom: $padding-small;
           @include respond(desktop-lg) {
-            font-size: 3vmin;
+            font-size: 4.5vmin;
+          }
+
+          @include respond(desktop-xl) {
+            font-size: 3rem;
           }
         }
       }

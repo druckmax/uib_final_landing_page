@@ -370,6 +370,7 @@ label {
 body {
   background-color: #191919;
   overflow-x: hidden;
+  height: 100%;
   -webkit-overflow-scrolling: touch;
 }
 body::before {
@@ -379,10 +380,21 @@ body::before {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.5;
   background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center/cover, #111;
   background-attachment: fixed;
   filter: brightness(30%);
+}
+
+.wrapper_all {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
 
 header {

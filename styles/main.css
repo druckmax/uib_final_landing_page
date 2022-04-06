@@ -306,12 +306,13 @@ label {
 }
 body {
   background-color: #191919;
-  overflow-x: hidden;
+  overflow: hidden;
   height: 100%;
+  position: fixed;
 }
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -320,6 +321,13 @@ body::before {
   background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center/cover, #111;
   background-attachment: fixed;
   filter: brightness(30%);
+}
+
+.wrapper_all {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 header {
@@ -429,18 +437,6 @@ main .services {
   width: 100%;
   position: relative;
   z-index: 2;
-}
-main .services::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.6;
-  background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center/cover, #111;
-  background-attachment: fixed;
-  filter: brightness(30%);
 }
 main .services::after {
   content: "";
@@ -579,18 +575,6 @@ main .about::after {
   filter: brightness(30%);
   z-index: -1;
 }
-main .about::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.6;
-  background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center/cover, #111;
-  background-attachment: fixed;
-  filter: brightness(30%);
-}
 main .about::after {
   clip-path: polygon(0 0, 0 65%, 100% 100%, 100% 35%);
 }
@@ -687,18 +671,6 @@ main .work::after {
   background-attachment: fixed;
   filter: brightness(30%);
   z-index: -1;
-}
-main .work::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.6;
-  background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center/cover, #111;
-  background-attachment: fixed;
-  filter: brightness(30%);
 }
 main .work::after {
   filter: hue-rotate(180deg) brightness(50%);
@@ -880,7 +852,7 @@ main .cta::before {
   position: absolute;
   background: url(../img/resize/compressor_large_resize.jpeg) no-repeat center center/cover;
   background-attachment: fixed;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 @media only screen and (min-width: 71.875em) {
   main .cta {
@@ -927,7 +899,6 @@ main .contact {
   z-index: 1;
   color: #191919;
   padding-top: 4rem;
-  background: url(../img/resize/headphone_large_resize.jpeg) no-repeat center center/cover;
   background-attachment: fixed;
 }
 main .contact::after {
@@ -950,10 +921,9 @@ main .contact::before {
   left: 0;
   top: 0;
   position: absolute;
-  background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center/cover;
+  background: url(../img/resize/headphone_large_resize.jpeg) no-repeat center center/cover;
   background-attachment: fixed;
   opacity: 0.6;
-  filter: brightness(20%);
 }
 main .contact::after {
   clip-path: polygon(0 0, 0 60%, 100% 100%, 100% 40%);

@@ -1,6 +1,7 @@
 body {
   @include overlay;
   background-color: $color-dark;
+  animation: mainFade .5s .2s ease-out both 1;
 }
 
 // .wrapper_all {
@@ -15,9 +16,8 @@ body {
 header {
   width: 100vw;
   height: 92vh;
-  background-attachment: fixed;
-  background: url(../img/bg_hero_mobile.jpg) no-repeat center center,
-    $color-darker;
+  background: url(../img/bg_hero_mobile.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
   filter: sepia(30%);
 
   @include respond(desktop-sm) {

@@ -7,11 +7,12 @@
 }
 
 html {
-  position: fixed;
   height: 100%;
   overflow: hidden;
   font-size: 50%;
   scroll-behavior: smooth;
+  background-attachment: fixed;
+
 
 
   @include respond(tablet) {
@@ -30,6 +31,7 @@ body {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch!important;
   color: $color-light;
+  background-color: $color-darker;
 
 }
 

@@ -34,6 +34,21 @@ body {
   -webkit-overflow-scrolling: touch !important;
   color: #e6e2d9;
 }
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url(photos/2452.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 a,
 a:link,
@@ -400,7 +415,11 @@ body::before {
   width: 100%;
   height: 100%;
   opacity: 0.5;
-  background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center/cover, #111;
+  background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center #111;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-attachment: fixed;
   filter: brightness(30%);
 }
@@ -413,13 +432,17 @@ header {
 }
 header::before {
   content: "";
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   opacity: 0.5;
-  background: url(../img/bg_hero.jpg) no-repeat center center/cover, #111;
+  background: url(../img/bg_hero.jpg) no-repeat center center, #111;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-attachment: fixed;
   filter: brightness(50%);
 }
@@ -520,7 +543,6 @@ main section {
 main .services {
   width: 100%;
   position: relative;
-  z-index: 2;
 }
 main .services::after {
   content: "";
@@ -530,10 +552,19 @@ main .services::after {
   width: 100%;
   height: 100%;
   opacity: 0.6;
-  background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center/cover;
-  background-attachment: fixed;
-  filter: brightness(30%);
-  z-index: -1;
+  background: #111;
+}
+@media only screen and (min-width: 71.875em) {
+  main .services::after {
+    background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    filter: brightness(30%);
+  }
 }
 main .services::after {
   filter: hue-rotate(320deg) brightness(40%);
@@ -545,6 +576,7 @@ main h2 {
   animation: servicesFade 2s 0.5s 1 both;
 }
 main .container_services {
+  z-index: 2;
   position: relative;
   margin: auto;
   width: 75%;
@@ -655,10 +687,19 @@ main .about::after {
   width: 100%;
   height: 100%;
   opacity: 0.6;
-  background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center/cover;
-  background-attachment: fixed;
-  filter: brightness(30%);
-  z-index: -1;
+  background: #111;
+}
+@media only screen and (min-width: 71.875em) {
+  main .about::after {
+    background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    filter: brightness(30%);
+  }
 }
 main .about::after {
   clip-path: polygon(0 0, 0 65%, 100% 100%, 100% 35%);
@@ -752,10 +793,19 @@ main .work::after {
   width: 100%;
   height: 100%;
   opacity: 0.6;
-  background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center/cover;
-  background-attachment: fixed;
-  filter: brightness(30%);
-  z-index: -1;
+  background: #111;
+}
+@media only screen and (min-width: 71.875em) {
+  main .work::after {
+    background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    filter: brightness(30%);
+  }
 }
 main .work::after {
   filter: hue-rotate(180deg) brightness(50%);
@@ -935,7 +985,15 @@ main .cta::before {
   left: 0;
   top: 0;
   position: absolute;
-  background: url(../img/resize/compressor_large_resize.jpeg) no-repeat center center/cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: url(../img/resize/compressor_large_resize.jpeg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-attachment: fixed;
   opacity: 0.7;
 }
@@ -984,7 +1042,6 @@ main .contact {
   z-index: 1;
   color: #191919;
   padding-top: 4rem;
-  background-attachment: fixed;
 }
 main .contact::after {
   content: "";
@@ -994,10 +1051,19 @@ main .contact::after {
   width: 100%;
   height: 100%;
   opacity: 0.6;
-  background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center/cover;
-  background-attachment: fixed;
-  filter: brightness(30%);
-  z-index: -1;
+  background: #111;
+}
+@media only screen and (min-width: 71.875em) {
+  main .contact::after {
+    background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    filter: brightness(30%);
+  }
 }
 main .contact::before {
   content: "";
@@ -1006,9 +1072,17 @@ main .contact::before {
   left: 0;
   top: 0;
   position: absolute;
-  background: url(../img/resize/headphone_large_resize.jpeg) no-repeat center center/cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: url(../img/resize/headphone_large_resize.jpeg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-attachment: fixed;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 main .contact::after {
   clip-path: polygon(0 0, 0 60%, 100% 100%, 100% 40%);

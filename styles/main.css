@@ -967,12 +967,13 @@ main .cta {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  background: url(../img/resize/compressor_large_resize.jpeg) no-repeat center center/cover;
+  background: url(../img/resize/compressor_large_resize_mobile.jpeg) no-repeat center center/cover;
   background-attachment: fixed;
 }
 @media only screen and (min-width: 71.875em) {
   main .cta {
     height: 40vh;
+    background: none;
   }
   main .cta::before {
     content: "";
@@ -1060,6 +1061,9 @@ main .contact::after {
   }
 }
 @media only screen and (min-width: 71.875em) {
+  main .contact {
+    background: none;
+  }
   main .contact::before {
     content: "";
     width: 100%;

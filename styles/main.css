@@ -34,21 +34,6 @@ body {
   -webkit-overflow-scrolling: touch !important;
   color: #e6e2d9;
 }
-body:before {
-  content: "";
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -10;
-  background: url(photos/2452.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
 a,
 a:link,
@@ -333,7 +318,7 @@ label {
   }
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(-20px);
   }
 }
 @keyframes manWalkingIn {
@@ -428,27 +413,29 @@ header {
   width: 100vw;
   height: 92vh;
   background-attachment: fixed;
+  background: url(../img/bg_hero_mobile.jpg) no-repeat center center, #111;
   filter: sepia(30%);
-}
-header::before {
-  content: "";
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  background: url(../img/bg_hero.jpg) no-repeat center center, #111;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed;
-  filter: brightness(50%);
 }
 @media only screen and (min-width: 71.875em) {
   header {
+    background: none;
     height: 88vh;
+  }
+  header::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: url(../img/bg_hero.jpg) no-repeat center center, #111;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(50%);
   }
 }
 header .content {
@@ -551,7 +538,7 @@ main .services::after {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.2;
   background: #111;
 }
 @media only screen and (min-width: 71.875em) {
@@ -563,6 +550,7 @@ main .services::after {
     background-size: cover;
     background-attachment: fixed;
     z-index: -1;
+    opacity: 0.6;
     filter: brightness(30%);
   }
 }
@@ -686,7 +674,7 @@ main .about::after {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.2;
   background: #111;
 }
 @media only screen and (min-width: 71.875em) {
@@ -698,6 +686,7 @@ main .about::after {
     background-size: cover;
     background-attachment: fixed;
     z-index: -1;
+    opacity: 0.6;
     filter: brightness(30%);
   }
 }
@@ -792,7 +781,7 @@ main .work::after {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.2;
   background: #111;
 }
 @media only screen and (min-width: 71.875em) {
@@ -804,6 +793,7 @@ main .work::after {
     background-size: cover;
     background-attachment: fixed;
     z-index: -1;
+    opacity: 0.6;
     filter: brightness(30%);
   }
 }
@@ -977,29 +967,30 @@ main .cta {
   position: relative;
   z-index: 1;
   overflow: hidden;
-}
-main .cta::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  position: absolute;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background: url(../img/resize/compressor_large_resize.jpeg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url(../img/resize/compressor_large_resize.jpeg) no-repeat center center/cover;
   background-attachment: fixed;
-  opacity: 0.7;
 }
 @media only screen and (min-width: 71.875em) {
   main .cta {
     height: 40vh;
+  }
+  main .cta::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: url(../img/resize/compressor_large_resize.jpeg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.8;
   }
 }
 main .cta_content {
@@ -1042,6 +1033,8 @@ main .contact {
   z-index: 1;
   color: #191919;
   padding-top: 4rem;
+  background: url(../img/resize/headphone_large_resize_mobile.jpeg) no-repeat center center/cover;
+  background-attachment: fixed;
 }
 main .contact::after {
   content: "";
@@ -1050,7 +1043,7 @@ main .contact::after {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.2;
   background: #111;
 }
 @media only screen and (min-width: 71.875em) {
@@ -1062,27 +1055,29 @@ main .contact::after {
     background-size: cover;
     background-attachment: fixed;
     z-index: -1;
+    opacity: 0.6;
     filter: brightness(30%);
   }
 }
-main .contact::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  position: absolute;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background: url(../img/resize/headphone_large_resize.jpeg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed;
-  opacity: 0.4;
+@media only screen and (min-width: 71.875em) {
+  main .contact::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: url(../img/resize/headphone_large_resize.jpeg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.4;
+  }
 }
 main .contact::after {
   clip-path: polygon(0 0, 0 60%, 100% 100%, 100% 40%);

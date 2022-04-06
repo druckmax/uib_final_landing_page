@@ -624,7 +624,12 @@ main .about .container_about .about_info h3 {
 }
 @media only screen and (min-width: 100em) {
   main .about .container_about .about_info h3 {
-    font-size: 3vmin;
+    font-size: 4.5vmin;
+  }
+}
+@media only screen and (min-width: 2350px) {
+  main .about .container_about .about_info h3 {
+    font-size: 3rem;
   }
 }
 main .about .container_about img {

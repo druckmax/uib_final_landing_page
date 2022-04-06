@@ -1,0 +1,53 @@
+@keyframes figureWipping {
+    0% {
+        transform: translate(-150%, 0%) rotate(-15deg);
+    }
+    50% {
+        transform: translate(-150%, 0%) rotate(0deg);
+        filter: drop-shadow(-1px 1px 5px $color-light);
+    }
+    75% {
+        transform: translate(-150%, -10%) rotate(-30deg);
+    }
+    100% {
+        transform: translate(-150%, 0%) rotate(-15deg);
+        filter: drop-shadow(-1px 1px 1px $color-light);
+
+    }
+}
+
+@keyframes figureWoman{
+    0% {
+        transform: translateX(235%) rotate(-5deg);
+    }
+    50% {
+        transform: translateX(235%) rotate(-9deg);
+        filter: drop-shadow(-1px 1px 5px $color-secondary);
+    }
+    75% {
+        transform: translateX(235%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(235%) rotate(-5deg);
+        filter: drop-shadow(-1px 1px 1px $color-light);
+
+    }
+}
+
+@keyframes figureWoman_02{
+    0% {
+        transform: translateX(-150%) rotate(-5deg);
+    }
+    50% {
+        transform: translateX(-148%) rotate(-9deg);
+        filter: drop-shadow(-1px 1px 5px $color-secondary);
+    }
+    75% {
+        transform: translateX(-152%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-150%) rotate(-5deg);
+        filter: drop-shadow(-1px 1px 1px $color-light);
+
+    }
+}

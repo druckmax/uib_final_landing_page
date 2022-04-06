@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 50%;
+
+    @include respond(tablet) {
+        font-size: 58%;
+    }
+    @include respond(desktop-sm) {
+        font-size: 62.5%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    color: $color-light;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: $color-lighter;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}

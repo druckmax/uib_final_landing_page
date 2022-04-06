@@ -1,0 +1,131 @@
+// ----- Media Queries ----- 
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == tablet {
+        @media only screen and (min-width: 50em)
+        {@content};
+    }
+    @if $breakpoint == desktop-sm {
+        @media only screen and (min-width: 71.875em)
+        {@content};
+    }
+    @if $breakpoint == desktop-lg {
+        @media only screen and (min-width: 100em)
+        {@content};
+    }
+    @if $breakpoint == desktop-xl {
+        @media only screen and (min-width: 2350px)
+        {@content};
+    }
+}
+
+// ----- Positioning -----
+
+@mixin flexMe ($flex_direction) {
+    display: flex;
+    flex-direction: $flex_direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin gridStack {
+    position: relative;
+    margin: auto;
+    width: 75%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    gap: $padding-medium;
+}
+
+// ----- Overlay -----
+
+@mixin hero_overlay {
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+        background: url(../img/bg_hero.jpg) no-repeat center center/cover, $color-darker;
+        background-attachment: fixed;
+        filter: brightness(50%);
+        
+    }
+}
+
+@mixin overlay {
+    &::before {
+        content: '';
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .6;
+        background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center/cover, $color-darker;
+        background-attachment: fixed;
+        filter: brightness(30%);
+        
+    }
+}
+
+@mixin overlay-after {
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .6;
+        background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center/cover;
+        background-attachment: fixed;
+        filter: brightness(30%); 
+        z-index: -1;
+    }
+}
+
+@mixin overlay_dark {
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .7;
+        background: $color-darker;
+    }
+}
+
+@mixin artits_blur {
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    filter: blur(2px) brightness(100%);
+    @include respond(desktop-sm) {
+        filter: blur(4px) brightness(100%);
+    }
+}
+
+@mixin overlay_temp {
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}

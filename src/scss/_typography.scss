@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Vazirmatn:wght@100;300;400;500;700;800&display=swap');
+
+@font-face {
+    font-family: "Bernier";
+    src:
+    url("../fonts/Bernier/Commercial/OTF/BERNIERRegular-Regular.otf") format("opentype"),
+    url("../fonts/Bernier/Commercial/TTF/BERNIERRegular-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Carosello";
+    src:
+    url("../fonts/Carosello_Font/Carosello-Regular.otf") format("opentype"),
+    url("../fonts/Carosello_Font/Carosello-Regular.ttf format")format("truetype");
+}
+
+
+$font-main: 'Vazirmatn', Arial, sans-serif;
+$font-special-01: 'Carosello', Arial, sans-serif;
+$font-special-02: 'Bernier', Arial, sans-serif;
+$font-special-03: 'Lobster', cursive;
+
+body {
+    font-family: $font-main;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: $font-special-03;
+    font-size: 10vmin;
+    line-height: 1.2;
+    text-shadow: 1px 1px 1px $color-light,
+                -4px -4px 5px $color-dark;
+
+    span {
+        font-size: .5em;
+        font-family: $font-special-02;
+    }
+}
+h2 {
+    font-family: $font-special-03;
+    font-size: 8vmin;
+}
+h3 {
+    font-family: $font-special-03;
+    font-size: 5vmin;
+    color: $color-secondary;
+    text-align: center;
+    text-shadow: 1px 1px 1px $color-lighter,
+    -1px -1px 1px $color-lighter;
+}
+h4 {
+    font-size: 6.6vmin;
+}
+h5 {
+    font-size: 5vmin;
+    text-align: center;
+}
+
+nav a {
+    font-size: 2rem;
+}
+
+.phone_number {
+    font-size: 8vmin;
+    font-family: $font-special-03;
+    display: inline-block;
+}
+
+[placeholder]::placeholder {
+    font-family: $font-main;
+    font-size: 1.5rem;
+  }
+
+textarea {
+    font-family: $font-main;
+    color: $color-grey;
+}
+
+.services,
+.about {
+    @include respond(desktop-sm) {
+        font-size: 1.6rem;
+    }
+}
+label {
+    font-size: 2rem;
+}

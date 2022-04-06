@@ -1,0 +1,158 @@
+.button {
+    // background-image: linear-gradient(to right bottom, $color-secondary, 80%, $color-link);
+    background-color: $color-secondary;
+    width: 20rem;
+    padding: 2vmin;
+    border-radius: 4px;
+    z-index: 2;
+    display: inline-block;
+    box-shadow: 1px 2px 2px $color-dark-hover;
+    transition: all .1s ;
+    outline: 1px solid $color-lighter;
+
+    @include respond(desktop-sm) {
+        font-size: 2.2rem;
+        padding: 1.5vmin 2vmin;
+    }
+
+    &:hover {
+        background-color: lighten($color-secondary, 7%);
+        transform: translateY(-3px) scale(1.08);
+        box-shadow: 1px 6px 8px $color-dark-hover;
+    }
+
+    &:active {
+        background-color: darken($color-secondary, 5%);
+        transform: translateY(-1px) scale(1.04);
+        box-shadow: 1px 3px 3px $color-dark-hover;
+        transition: all 0s;
+    }
+}
+
+
+.button_impressum {
+    padding: $padding-small;
+}
+
+    .button_impressum:hover {
+      color: $color-primary !important;
+    }
+    .button_impressum:active {
+      color: darken($color: $color-primary, $amount: 10%) !important;
+    }
+
+.hamburger {
+    display:none;
+}
+
+.h2_line {
+    position: relative;
+    border: none;
+    height: 1px;
+    background-color: $color-light;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: $margin-medium;
+    z-index: 2;
+}
+
+.section_divider {
+    position: relative;
+    z-index: 2;
+    height: 2rem;
+    background-color: $color-lighter;
+    opacity: .9;
+}
+
+.logo_heading {
+    width: 12rem;
+    padding-bottom: $padding-medium;
+
+    @include respond(tablet) {
+      width: 15rem;
+      padding: $padding-small;
+    }
+
+    @include respond(desktop-lg) {
+      width: 18rem;
+      padding: $padding-small;
+    }
+  }
+  
+
+// ----- Icons -----
+
+.icon_box {
+    transition: all 0.2s;
+    padding-top: $padding-medium;
+
+    @include respond(desktop-sm) {
+      padding: 0 $padding-medium;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      transform: scale(1.05);
+    }
+
+    .fa-facebook-f:hover,
+    .facebook:hover {
+      color: #3b5998;
+    }
+
+    .fa-facebook-f:active,
+    .facebook:active {
+      color: #293d69;
+    }
+
+    .fa-instagram:hover,
+    .instagram:hover {
+      background: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .fa-instagram:active,
+    .instagram:active {
+      color: rgba(17, 17, 17, 0.322);
+    }
+
+    .fa-youtube:hover,
+    .youtube:hover {
+      color: #c4302b;
+    }
+
+    .fa-youtube:active,
+    .youtube:active {
+      color: #7e1e1b;
+    }
+
+    .fa-envelope:hover {
+      color: #888;
+    }
+
+    .fa-envelope:active {
+      color: #555;
+    }
+
+    .fa-soundcloud:hover,
+    .soundcloud:hover {
+        color: #ff7700;
+      }
+  
+      .fa-soundcloud:active,
+      .soundcloud:active {
+        color: #555;
+      }
+  }

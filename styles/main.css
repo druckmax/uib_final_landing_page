@@ -8,6 +8,9 @@
 }
 
 html {
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
   font-size: 50%;
 }
 @media only screen and (min-width: 50em) {
@@ -24,6 +27,11 @@ html {
 
 body {
   box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   color: #e6e2d9;
 }
 
@@ -299,6 +307,20 @@ label {
     opacity: 1;
   }
 }
+@keyframes servicesFade {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  80% {
+    opacity: 0.4;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 @keyframes manWalkingIn {
   0% {
     transform: translate(-150%, -50%) rotate(180deg);
@@ -369,8 +391,6 @@ label {
 }
 body {
   background-color: #191919;
-  overflow-x: hidden;
-  height: 100%;
 }
 body::before {
   content: "";
@@ -383,14 +403,6 @@ body::before {
   background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center/cover, #111;
   background-attachment: fixed;
   filter: brightness(30%);
-}
-
-.wrapper_all {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 header {
@@ -530,6 +542,7 @@ main .services::after {
 main h2 {
   text-align: center;
   z-index: 1;
+  animation: servicesFade 2s 0.5s 1 both;
 }
 main .container_services {
   position: relative;

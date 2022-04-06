@@ -371,7 +371,6 @@ body {
   background-color: #191919;
   overflow-x: hidden;
   height: 100%;
-  -webkit-overflow-scrolling: touch;
 }
 body::before {
   content: "";
@@ -392,7 +391,6 @@ body::before {
   bottom: 0;
   left: 0;
   right: 0;
-  overflow: auto;
 }
 
 header {

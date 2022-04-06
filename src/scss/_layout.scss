@@ -1,29 +1,42 @@
 body {
   @include overlay;
   background-color: $color-dark;
-  overflow-x: hidden;
 }
+
+// .wrapper_all {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+// }
 
 // ----- Header -----
 header {
   width: 100vw;
   height: 92vh;
   background-attachment: fixed;
-  filter: sepia(20%);
-  @include hero_overlay;
+  background: url(../img/bg_hero_mobile.jpg) no-repeat center center,
+    $color-darker;
+  filter: sepia(30%);
 
   @include respond(desktop-sm) {
+    background: none;
     height: 88vh;
+    @include hero_overlay;
   }
 
   .content {
     position: relative;
+
     z-index: 01;
   }
 
   // ----- Navbar-----
   nav {
     padding: $padding-small;
+    animation: navbarFade 2s 0.5s 1 both;
+    position: relative;
 
     ul {
       @include flexMe(row);
@@ -56,13 +69,14 @@ header {
   // ----- Hero -----
   .hero {
     @include absCenter;
-    width: 100vw;
     text-align: center;
     mix-blend-mode: difference;
+    width: 80vw;
 
     h1 {
       padding: $padding-medium;
       color: $color-secondary;
+      animation: heroFade 2s 0.5s 1 both ease-out;
 
       span {
         display: block;
@@ -76,6 +90,10 @@ header {
       width: 50%;
       height: 100%;
 
+      .figure_group {
+        animation: manWalkingIn 2s 0.3s 1 both linear;
+      }
+
       .figure_man_01 {
         position: absolute;
         left: 50%;
@@ -88,6 +106,9 @@ header {
           left: 50%;
           width: 200px;
         }
+      }
+      .button_header {
+        animation: buttonFade 2s 0.5s 1 both ease-out;
       }
     }
 
@@ -108,7 +129,7 @@ main {
   .services {
     width: 100%;
     position: relative;
-    z-index: 2;
+    // @include overlay;
     @include overlay-after;
 
     &::after {
@@ -119,9 +140,12 @@ main {
   h2 {
     text-align: center;
     z-index: 1;
+    animation: servicesFade 2s 0.5s 1 both;
   }
 
   .container_services {
+    z-index: 2;
+
     @include gridStack;
 
     @include respond(desktop-sm) {
@@ -218,6 +242,7 @@ main {
     position: relative;
     z-index: 1;
     @include overlay-after;
+    // @include overlay;
 
     &::after {
       clip-path: polygon(0 0, 0 65%, 100% 100%, 100% 35%);
@@ -298,6 +323,7 @@ main {
     position: relative;
     z-index: 1;
     @include overlay-after;
+    // @include overlay;
 
     &::after {
       filter: hue-rotate(180deg) brightness(50%);
@@ -439,17 +465,24 @@ main {
     position: relative;
     z-index: 1;
     overflow: hidden;
-
-    &::before {
-      @include overlay_temp;
-      background: url(../img/resize/compressor_large_resize.jpeg) no-repeat
-        center center/cover;
-      background-attachment: fixed;
-      opacity: 0.6;
-    }
+    background: url(../img/resize/compressor_large_resize_mobile.jpeg) no-repeat center
+      center/cover;
+    background-attachment: fixed;
 
     @include respond(desktop-sm) {
       height: 40vh;
+      background: none;
+      &::before {
+        @include overlay_temp;
+        background: url(../img/resize/compressor_large_resize.jpeg) no-repeat
+          center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-attachment: fixed;
+        opacity: 0.8;
+      }
     }
 
     &_content {
@@ -495,15 +528,26 @@ main {
     color: $color-dark;
     padding-top: $padding-large;
     @include overlay-after;
+    background: url(../img/resize/headphone_large_resize_mobile.jpeg) no-repeat
+    center center/cover;
+    background-attachment: fixed;
 
-    &::before {
-      @include overlay_temp;
-      background: url(../img/resize/headphone_large_resize.jpeg) no-repeat
-        center center/cover;
-      background-attachment: fixed;
-      opacity: 0.4;
+
+    @include respond(desktop-sm) {
+      background: none;
+      
+      &::before {
+        @include overlay_temp;
+        background: url(../img/resize/headphone_large_resize.jpeg) no-repeat
+          center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-attachment: fixed;
+        opacity: 0.4;
+      }
     }
-
     &::after {
       clip-path: polygon(0 0, 0 60%, 100% 100%, 100% 40%);
       z-index: 1;
@@ -568,7 +612,6 @@ main {
       }
 
       .button_send_group {
-
         .button_send {
           display: flex;
           justify-content: center;
@@ -583,7 +626,7 @@ main {
           transform: translateX(-150%) rotate(0deg);
           transform-origin: left;
           opacity: 0.9;
-          transition: all .5s;
+          transition: all 0.5s;
           z-index: 5;
 
           @include respond(tablet) {
@@ -598,7 +641,7 @@ main {
           }
         }
 
-        &:hover .figure_woman_02{
+        &:hover .figure_woman_02 {
           animation: figureWoman_02 1s alternate infinite;
         }
       }

@@ -256,6 +256,69 @@ label {
   color: #555;
 }
 
+@keyframes navbarFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  80% {
+    opacity: 0.4;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes heroFade {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.4;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 4;
+  }
+}
+@keyframes buttonFade {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  70% {
+    transform: translateX(0);
+    opacity: 0.2;
+  }
+  80% {
+    opacity: 0.2;
+    transform: translateX(-5px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes manWalkingIn {
+  0% {
+    transform: translate(-150%, -50%) rotate(180deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -25%) rotate(15deg);
+  }
+  75% {
+    transform: translate(-25%, 0%) rotate(-30deg);
+  }
+  90% {
+    opacity: 0.4;
+    transform: translate(5px, 0%) rotate(5deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(0deg);
+    opacity: 1;
+  }
+}
 @keyframes figureWipping {
   0% {
     transform: translate(-150%, 0%) rotate(-15deg);
@@ -265,10 +328,10 @@ label {
     filter: drop-shadow(-1px 1px 5px #e6e2d9);
   }
   75% {
-    transform: translate(-150%, -10%) rotate(-30deg);
+    transform: translate(-150%, 0%) rotate(-30deg);
   }
   100% {
-    transform: translate(-150%, 0%) rotate(-15deg);
+    transform: translate(-150%, 0%) rotate(0deg);
     filter: drop-shadow(-1px 1px 1px #e6e2d9);
   }
 }
@@ -308,7 +371,6 @@ body {
   background-color: #191919;
   overflow: hidden;
   height: 100%;
-  position: fixed;
 }
 body::before {
   content: "";
@@ -334,7 +396,7 @@ header {
   width: 100vw;
   height: 92vh;
   background-attachment: fixed;
-  filter: sepia(20%);
+  filter: sepia(30%);
 }
 header::before {
   content: "";
@@ -359,6 +421,8 @@ header .content {
 }
 header nav {
   padding: 1rem;
+  animation: navbarFade 2s 0.5s 1 both;
+  position: relative;
 }
 header nav ul {
   display: flex;
@@ -392,13 +456,14 @@ header .hero {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100vw;
   text-align: center;
   mix-blend-mode: difference;
+  width: 80vw;
 }
 header .hero h1 {
   padding: 2rem;
   color: #C84B31;
+  animation: heroFade 2s 0.5s 1 both ease-out;
 }
 header .hero h1 span {
   display: block;
@@ -409,6 +474,9 @@ header .hero .wip {
   position: relative;
   width: 50%;
   height: 100%;
+}
+header .hero .wip .figure_group {
+  animation: manWalkingIn 2s 0.3s 1 both linear;
 }
 header .hero .wip .figure_man_01 {
   position: absolute;
@@ -423,6 +491,9 @@ header .hero .wip .figure_man_01 {
     left: 50%;
     width: 200px;
   }
+}
+header .hero .wip .button_header {
+  animation: buttonFade 2s 0.5s 1 both ease-out;
 }
 header .hero:hover .figure_man_01 {
   animation: figureWipping 1.2s 0.5s infinite alternate both;

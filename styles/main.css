@@ -413,7 +413,6 @@ header {
   width: 100vw;
   height: 92vh;
   background-attachment: fixed;
-  position: relative;
   background: url(../img/bg_hero_mobile.jpg) no-repeat center center, #111;
   filter: sepia(30%);
 }
@@ -992,6 +991,7 @@ main .cta {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
     opacity: 0.8;
   }
 }
@@ -1081,6 +1081,7 @@ main .contact::after {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
     opacity: 0.4;
   }
 }

@@ -12,6 +12,7 @@ html {
   height: 100%;
   overflow: hidden;
   font-size: 50%;
+  scroll-behavior: smooth;
 }
 @media only screen and (min-width: 50em) {
   html {
@@ -20,7 +21,6 @@ html {
 }
 @media only screen and (min-width: 71.875em) {
   html {
-    scroll-behavior: smooth;
     font-size: 62.5%;
   }
 }

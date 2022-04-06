@@ -8,7 +8,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
   font-size: 50%;
 }
 @media only screen and (min-width: 50em) {
@@ -18,6 +17,7 @@ html {
 }
 @media only screen and (min-width: 71.875em) {
   html {
+    scroll-behavior: smooth;
     font-size: 62.5%;
   }
 }
@@ -307,6 +307,7 @@ label {
 body {
   background-color: #191919;
   overflow-x: hidden;
+  height: 100%;
 }
 body::before {
   content: "";
@@ -319,6 +320,15 @@ body::before {
   background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center/cover, #111;
   background-attachment: fixed;
   filter: brightness(30%);
+}
+
+.wrapper_all {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
 }
 
 header {

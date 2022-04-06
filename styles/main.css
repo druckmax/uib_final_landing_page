@@ -369,12 +369,12 @@ label {
 }
 body {
   background-color: #191919;
-  overflow: hidden;
-  height: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 body::before {
   content: "";
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
@@ -383,13 +383,6 @@ body::before {
   background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center/cover, #111;
   background-attachment: fixed;
   filter: brightness(30%);
-}
-
-.wrapper_all {
-  width: 100vw;
-  height: 100vh;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 
 header {

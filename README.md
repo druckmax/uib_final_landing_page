@@ -5,7 +5,7 @@ This is the final project for the uib-module. To see the final version you can g
 https://druckmax.github.io/uib_final_landing_page/
 
 ## Concept:
-The concept is to build a simple homepage for a fictional recording studio, which specializes in vintage gear and recording techniques. To convey the feeling of nostalgia the design focuses on gritty overlay textures and animated figures, taken from 1950s style ads.
+The concept is to build a simple homepage for a fictional recording studio, which specializes in vintage gear and recording techniques. To convey the feeling of nostalgia, the design focuses on gritty overlay textures and animated figures, taken from 1950s style ads.
 
 A high focus lies on the responsiveness of the website. The website purely relies on CSS, compiled from SCSS.
 

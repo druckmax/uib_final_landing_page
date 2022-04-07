@@ -16,14 +16,15 @@ body {
 header {
   width: 100vw;
   height: 92vh;
-  background: url(../img/bg_hero_mobile.jpg) no-repeat center center/cover;
+  // background: url(../img/bg_hero_mobile.jpg) no-repeat center center/cover;
     background-attachment: fixed;
   filter: sepia(30%);
+  @include hero_overlay;
+
 
   @include respond(desktop-sm) {
-    background: none;
+    // background: none;
     height: 88vh;
-    @include hero_overlay;
   }
 
   .content {
@@ -284,7 +285,7 @@ main {
 
         @include respond(tablet) {
           border-radius: 15px 0 0 15px;
-          height: 50rem;
+          height: auto;
           padding: $padding-medium $padding-large;
         }
 
@@ -310,7 +311,7 @@ main {
 
         @include respond(tablet) {
           border-radius: 0 15px 15px 0;
-          height: 50rem;
+          height: 100%;
         }
       }
     }
@@ -354,7 +355,6 @@ main {
         overflow: hidden;
         transition: all 0.3s 0.3s linear;
         position: relative;
-        transform: scale(1);
         width: 100%;
         @include overlay_dark;
 
@@ -366,6 +366,7 @@ main {
         &::before {
           @include artits_blur;
           transition: all 0.3s 0.3s linear;
+          transform: scale(1.1);
         }
 
         .work_box--front {
@@ -424,7 +425,8 @@ main {
       }
       .artist_C::before {
         background: url(../img/resize/artist_C_resize.jpg) no-repeat center
-          center/cover;
+          center;
+          background-size: 200%;
       }
       .artist_D:before {
         background: url(../img/resize/artist_D_resize.jpg) no-repeat center
@@ -528,14 +530,8 @@ main {
     color: $color-dark;
     padding-top: $padding-large;
     @include overlay-after;
-    background: url(../img/resize/headphone_large_resize_mobile.jpeg) no-repeat
-    center center/cover;
     background-attachment: fixed;
 
-
-    @include respond(desktop-sm) {
-      background: none;
-      
       &::before {
         @include overlay_temp;
         background: url(../img/resize/headphone_large_resize.jpeg) no-repeat
@@ -547,7 +543,7 @@ main {
         background-attachment: fixed;
         opacity: 0.4;
       }
-    }
+
     &::after {
       clip-path: polygon(0 0, 0 60%, 100% 100%, 100% 40%);
       z-index: 1;

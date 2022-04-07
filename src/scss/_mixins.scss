@@ -76,7 +76,7 @@
         width: 100%;
         height: 100%;
         opacity: .5;
-        background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center $color-darker;
+        background: url(../img/resize/grain_overlay_resize.jpeg) no-repeat center center, $color-darker;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

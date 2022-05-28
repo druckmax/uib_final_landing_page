@@ -82,14 +82,6 @@
     @include respond(desktop-sm) {
       padding: 0 $padding-medium;
     }
-
-    &:hover {
-      // transform: scale(1.1);
-    }
-    &:active {
-      // transform: scale(1.05);
-    }
-
     .fa-facebook-f:hover,
     .facebook:hover {
       color: #3b5998;

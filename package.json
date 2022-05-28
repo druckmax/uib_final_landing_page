@@ -5,23 +5,29 @@
   "main": "index.html",
   "author": "Max Sommerfeld",
   "scripts": {
-    "start": "run-p watch watch:styles",
-    "build": "run-s clean clean:styles build:styles copy",
-    "deploy": "run-s build publish",
-    "build:styles": "sass src/scss:src/styles",
     "watch": "live-server src",
     "watch:styles": "sass src/scss:src/styles --watch",
+    "start": "run-p watch watch:styles",
+
     "clean": "rm -rf dist",
     "clean:styles": "rm -rf src/styles",
+    "build:styles": "sass src/scss:src/styles",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/styles/main.css -o src/styles/main.css",
     "copy": "mkdir dist && rsync -avr --exclude=\"/scss\" src/ dist",
-    "publish": "gh-pages -d dist"
+    "build": "run-s clean clean:styles build:styles prefix:css copy",
+
+    "publish": "gh-pages -d dist",
+    "deploy": "run-s build publish"
   },
   "keywords": [],
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.4",
     "gh-pages": "latest",
-    "live-server": "latest",
+    "live-server": "^1.1.0",
     "npm-run-all": "latest",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
     "sass": "latest"
   }
 }

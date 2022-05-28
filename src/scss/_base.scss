@@ -27,6 +27,7 @@ body {
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
+  scroll-behavior: smooth;
   overflow-y: scroll!important;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch!important;

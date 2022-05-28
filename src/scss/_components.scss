@@ -57,14 +57,6 @@
     z-index: 2;
 }
 
-.section_divider {
-    position: relative;
-    z-index: 2;
-    height: 2rem;
-    background-color: $color-lighter;
-    opacity: .9;
-}
-
 .logo_heading {
     width: 12rem;
     padding-bottom: $padding-medium;
@@ -92,10 +84,10 @@
     }
 
     &:hover {
-      transform: scale(1.1);
+      // transform: scale(1.1);
     }
     &:active {
-      transform: scale(1.05);
+      // transform: scale(1.05);
     }
 
     .fa-facebook-f:hover,

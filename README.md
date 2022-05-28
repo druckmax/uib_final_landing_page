@@ -10,7 +10,8 @@ The concept is to build a simple homepage for a fictional recording studio, whic
 A high focus lies on the responsiveness of the website. The website purely relies on CSS, compiled from SCSS.
 
 ## Want to do:
-1. Fixing performance issues
+1. ~~Fixing performance issues~~
+    - Find workaround for background-attachment:fixed issues under firefox
 2. Adding hamburger menu to the navbar with CSS popup
 3. Adding Google maps iframe
 4. Adding Impressum
